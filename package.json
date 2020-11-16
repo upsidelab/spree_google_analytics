@@ -1,0 +1,13 @@
+{
+  "name": "spree_google_analytics",
+  "private": true,
+  "dependencies": {
+    "vue": "^2.6.12",
+    "vue-loader": "^15.9.5",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.0"
+  }
+}
