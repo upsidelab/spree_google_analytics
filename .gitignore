@@ -21,3 +21,4 @@ public/spree
 .ruby-version
 .ruby-gemset
 gemfiles/*.gemfile.lock
+node_modules/
