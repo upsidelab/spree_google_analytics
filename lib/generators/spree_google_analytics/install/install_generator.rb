@@ -7,6 +7,8 @@ module SpreeGoogleAnalytics
                    default: false,
                    desc: "Skip running the webpacker installer."
 
+      source_root File.expand_path("files", __dir__)
+
       def add_migrations
         run 'bundle exec rake railties:install:migrations FROM=spree_google_analytics'
       end
