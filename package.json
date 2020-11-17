@@ -2,8 +2,8 @@
   "name": "spree_google_analytics",
   "private": true,
   "version": "0.1.0",
-  "description": "AlchemyCMS",
-  "browser": "package/admin.js",
+  "description": "Spree Google Analytics",
+  "browser": "package/index.js",
   "files": [
     "package/**/*"
   ],
@@ -15,8 +15,8 @@
     "url": "git+https://github.com/upsidelab/spree_google_analytics.git"
   },
   "keywords": [],
-  "author": "Grzegorz Tłuszcz",
-  "license": "",
+  "author": "Upsidelab",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/upsidelab/spree_google_analytics/issues"
   },
@@ -28,6 +28,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-env": "^7.9.6"
   }
 }
