@@ -1,14 +1,33 @@
 {
   "name": "spree_google_analytics",
   "private": true,
+  "version": "0.1.0",
+  "description": "AlchemyCMS",
+  "browser": "package/admin.js",
+  "files": [
+    "package/**/*"
+  ],
+  "directories": {
+    "lib": "package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/upsidelab/spree_google_analytics.git"
+  },
+  "keywords": [],
+  "author": "Grzegorz Tłuszcz",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/upsidelab/spree_google_analytics/issues"
+  },
+  "homepage": "https://github.com/upsidelab/spree_google_analytics#readme",
   "dependencies": {
-    "@rails/webpacker": "4.3.0",
     "vue": "^2.6.12",
     "vue-loader": "^15.9.5",
     "vue-template-compiler": "^2.6.12"
   },
-  "version": "0.1.0",
   "devDependencies": {
-    "webpack-dev-server": "^3.11.0"
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
   }
 }

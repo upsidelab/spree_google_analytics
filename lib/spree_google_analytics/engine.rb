@@ -15,28 +15,6 @@ module SpreeGoogleAnalytics
       end
     end
 
-    config.app_middleware.use(
-        Rack::Static,
-        # note! this varies from the Webpacker/engine documentation
-        urls: ["/spree-google-analytics-packs"], root: SpreeGoogleAnalytics::Engine.root.join("public")
-        # instead of -> urls: ["/saddlebag-packs"], root: "saddlebag/public"
-    )
-
     config.to_prepare(&method(:activate).to_proc)
-
-    initializer "webpacker.proxy" do |app|
-      insert_middleware = begin
-                            SpreeGoogleAnalytics.webpacker.config.dev_server.present?
-                          rescue
-                            nil
-                          end
-      next unless insert_middleware
-
-      app.middleware.insert_before(
-          0, Webpacker::DevServerProxy, # "Webpacker::DevServerProxy" if Rails version < 5
-          ssl_verify_none: true,
-          webpacker: SpreeGoogleAnalytics.webpacker
-      )
-    end
   end
 end
