@@ -1,6 +1,5 @@
 {
   "name": "spree_google_analytics",
-  "private": true,
   "version": "0.1.0",
   "description": "Spree Google Analytics",
   "browser": "package/index.js",
