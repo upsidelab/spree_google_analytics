@@ -5,7 +5,7 @@ import Vue from 'vue'
 document.addEventListener('DOMContentLoaded', () => {
   console.log(pages)
   console.log('LOADED')
-  const app = new Vue({
+  new Vue({
     el: '#app',
     components: pages.MainPage
   })

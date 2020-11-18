@@ -31,12 +31,14 @@
     "build:es": "rollup --config rollup.config.js --format es --file package/dist/index.esm.js",
     "build:unpkg": "rollup --config rollup.config.js --format iife --file package/dist/index.min.js"
   },
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.3",
     "@rollup/plugin-commonjs": "^11.1.0",
     "rollup": "^1.17.0",
     "rollup-plugin-vue": "^5.0.1",
-    "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
   }
 }
