@@ -1,10 +1,6 @@
 <h1>HELLO!</h1>
 
-<%= javascript_pack_tag 'spree_google_analytics' %>
-
-<div id="app">
-  <div>
-    <test-a />
-    <test-b />
-  </div>
-</div>
+<%= render 'spree/admin/shared/vue_component' do %>
+  <test-a></test-a>
+  <test-b></test-b>
+<% end %>
