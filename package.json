@@ -1,6 +1,6 @@
 {
   "name": "spree_google_analytics",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Spree Google Analytics",
   "main": "package/dist/index.umd.js",
   "module": "package/dist/index.esm.js",
