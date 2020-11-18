@@ -1,7 +1,6 @@
 import * as components from './components'
 import * as pages from './pages'
-
-// Declare install function executed by Vue.use()
+import Vue from 'vue'
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log(pages)
