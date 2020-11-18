@@ -240,13 +240,121 @@ __vue_render__$1._withStripped = true;
     undefined
   );
 
-var components = {
+
+
+var components = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  TestA: __vue_component__,
+  TestB: __vue_component__$1
+});
+
+//
+
+var script$2 = {
+  data: function data () {
+    return {
+      msg: 'Hello from MainPage'
+    }
+  },
+  components: {
     TestA: __vue_component__,
     TestB: __vue_component__$1
+  },
 };
 
+/* script */
+var __vue_script__$2 = script$2;
+
+/* template */
+var __vue_render__$2 = function() {
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
+  return _c(
+    "div",
+    [
+      _c("p", { staticClass: "example" }, [_vm._v(_vm._s(_vm.msg))]),
+      _vm._v(" "),
+      _c("test-a"),
+      _vm._v(" "),
+      _c("test-b")
+    ],
+    1
+  )
+};
+var __vue_staticRenderFns__$2 = [];
+__vue_render__$2._withStripped = true;
+
+  /* style */
+  var __vue_inject_styles__$2 = function (inject) {
+    if (!inject) { return }
+    inject("data-v-8c2604f8_0", { source: "\n.example {\n  color: red;\n}\n", map: {"version":3,"sources":["/Users/grzegorztluszcz/Code/spree_google_analytics/package/src/pages/MainPage.vue"],"names":[],"mappings":";AA6BA;EACA,UAAA;AACA","file":"MainPage.vue","sourcesContent":["<template>\n  <div>\n    <p class=\"example\">{{ msg }}</p>\n    <test-a />\n    <test-b />\n  </div>\n</template>\n\n\n<script>\n import {\n   TestA,\n   TestB\n } from '../components'\n\nexport default {\n  data () {\n    return {\n      msg: 'Hello from MainPage'\n    }\n  },\n  components: {\n    TestA,\n    TestB\n  },\n}\n</script>\n\n<style>\n.example {\n  color: red;\n}\n</style>\n"]}, media: undefined });
+
+  };
+  /* scoped */
+  var __vue_scope_id__$2 = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$2 = undefined;
+  /* functional template */
+  var __vue_is_functional_template__$2 = false;
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__$2 = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$2, staticRenderFns: __vue_staticRenderFns__$2 },
+    __vue_inject_styles__$2,
+    __vue_script__$2,
+    __vue_scope_id__$2,
+    __vue_is_functional_template__$2,
+    __vue_module_identifier__$2,
+    false,
+    createInjector,
+    undefined,
+    undefined
+  );
+
+
+
+var pages = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  MainPage: __vue_component__$2
+});
+
+// Declare install function executed by Vue.use()
+function install(Vue) {
+    if (install.installed) { return; }
+    install.installed = true;
+
+    Object.keys(pages).forEach(function (name) {
+        var component = pages[name];
+        Vue.component(name, component);
+    });
+}
+
+// Create module definition for Vue.use()
+var plugin = {
+    install: install,
+};
+
+// Auto-install when vue is found (eg. in browser via <script> tag)
+var GlobalVue = null;
+if (typeof window !== 'undefined') {
+    GlobalVue = window.Vue;
+} else if (typeof global !== 'undefined') {
+    GlobalVue = global.Vue;
+}
+if (GlobalVue) {
+    GlobalVue.use(plugin);
+}
+
+// To allow use as module (npm/webpack/etc.) export component
 var index = {
-    components: components
+    components: components,
+    pages: pages
 };
 
 export default index;
+export { install };

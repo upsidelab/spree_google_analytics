@@ -1,13 +1,17 @@
 <template>
-  <div class="example">{{ msg }}</div>
-  <test-a />
-  <test-b />
+  <div>
+    <p class="example">{{ msg }}</p>
+    <test-a />
+    <test-b />
+  </div>
 </template>
 
 
 <script>
-import TestA from '../components/TestA'
-import TestB from '../components/TestB'
+ import {
+   TestA,
+   TestB
+ } from '../components'
 
 export default {
   data () {
@@ -17,7 +21,7 @@ export default {
   },
   components: {
     TestA,
-    TestB,
+    TestB
   },
 }
 </script>

@@ -1,5 +1,1 @@
-import MainPage from '../pages/MainPage.vue'
-
-export default {
-    MainPage
-}
+export { default as MainPage } from '../pages/MainPage.vue'

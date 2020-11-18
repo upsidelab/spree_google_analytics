@@ -1,14 +1,15 @@
-import components from './components'
-import pages from './pages'
+import * as components from './components'
+import * as pages from './pages'
 
 // Declare install function executed by Vue.use()
 export function install(Vue) {
     if (install.installed) return;
     install.installed = true;
 
-    for (const [name, component] of pages) {
+    Object.keys(pages).forEach(name => {
+        const component = pages[name]
         Vue.component(name, component);
-    }
+    })
 }
 
 // Create module definition for Vue.use()
