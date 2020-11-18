@@ -4,9 +4,11 @@ import * as pages from './pages'
 // Declare install function executed by Vue.use()
 
 document.addEventListener('DOMContentLoaded', () => {
+  console.log(pages)
+  console.log('LOADED')
   const app = new Vue({
     el: '#app',
-    components: pages
+    components: pages.MainPage
   })
 })
 

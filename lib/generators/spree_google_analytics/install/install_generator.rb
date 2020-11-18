@@ -44,6 +44,10 @@ module SpreeGoogleAnalytics
                   app_root.join(webpack_config["source_path"], webpack_config["source_entry_path"], "spree_google_analytics.js")
       end
 
+      def precompile_assets
+        rake("assets:precompile", abort_on_failure: true)
+      end
+
       private
 
       def app_root
