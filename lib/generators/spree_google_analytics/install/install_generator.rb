@@ -32,7 +32,7 @@ module SpreeGoogleAnalytics
       end
 
       def add_npm_package
-        run "yarn add @spree_google_analytics"
+        run "yarn add @upside-io/spree_google_analytics"
       end
 
       def copy_alchemy_entry_point

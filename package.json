@@ -1,5 +1,5 @@
 {
-  "name": "spree_google_analytics",
+  "name": "@upside-io/spree_google_analytics",
   "version": "0.1.0",
   "description": "Spree Google Analytics",
   "browser": "package/index.js",
