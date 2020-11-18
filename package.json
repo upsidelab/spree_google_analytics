@@ -1,6 +1,6 @@
 {
   "name": "spree_google_analytics",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Spree Google Analytics",
   "main": "package/dist/index.umd.js",
   "module": "package/dist/index.esm.js",
@@ -32,9 +32,9 @@
     "build:unpkg": "rollup --config rollup.config.js --format iife --file package/dist/index.min.js"
   },
   "devDependencies": {
-    "rollup": "^1.17.0",
     "@rollup/plugin-buble": "^0.21.3",
     "@rollup/plugin-commonjs": "^11.1.0",
+    "rollup": "^1.17.0",
     "rollup-plugin-vue": "^5.0.1",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
