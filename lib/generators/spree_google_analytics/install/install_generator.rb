@@ -1,6 +1,7 @@
 module SpreeGoogleAnalytics
   module Generators
     class InstallGenerator < Rails::Generators::Base
+      class_option :migrations, type: :boolean, default: true
       class_option :auto_run_migrations, type: :boolean, default: false
       class_option :skip_webpacker_installer,
                    type: :boolean,
@@ -10,10 +11,12 @@ module SpreeGoogleAnalytics
       source_root File.expand_path("files", __dir__)
 
       def add_migrations
+        return unless options[:migrations]
         run 'bundle exec rake railties:install:migrations FROM=spree_google_analytics'
       end
 
       def run_migrations
+        return unless options[:migrations]
         run_migrations = options[:auto_run_migrations] || ['', 'y', 'Y'].include?(ask('Would you like to run the migrations now? [Y/n]'))
         if run_migrations
           run 'bundle exec rails db:migrate'
