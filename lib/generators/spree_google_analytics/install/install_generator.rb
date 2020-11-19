@@ -31,7 +31,7 @@ module SpreeGoogleAnalytics
         unless File.exist? app_root.join("package.json")
           in_root { run "echo '{}' > package.json" }
         end
-        rake("webpacker:install", abort_on_failure: true)
+        rake("webpacker:install:vue", abort_on_failure: true)
       end
 
       def add_npm_package
