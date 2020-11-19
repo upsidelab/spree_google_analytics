@@ -2,17 +2,17 @@
   "name": "spree_google_analytics",
   "version": "0.1.13",
   "description": "Spree Google Analytics",
-  "main": "package/dist/index.umd.js",
-  "module": "package/dist/index.esm.js",
-  "unpkg": "package/dist/index.min.js",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.esm.js",
   "browser": {
-    "./sfc": "package/src/index.js"
+    "./sfc": "src/index.js"
   },
   "files": [
-    "package/dist/**/*"
+    "src/**/*",
+    "dist/**/*"
   ],
   "directories": {
-    "lib": "package/dist"
+    "lib": "dist"
   },
   "repository": {
     "type": "git",
@@ -27,9 +27,9 @@
   "homepage": "https://github.com/upsidelab/spree_google_analytics#readme",
   "scripts": {
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "build:umd": "rollup --config rollup.config.js --format umd --file package/dist/index.umd.js",
-    "build:es": "rollup --config rollup.config.js --format es --file package/dist/index.esm.js",
-    "build:unpkg": "rollup --config rollup.config.js --format iife --file package/dist/index.min.js"
+    "build:umd": "../node_modules/.bin/rollup --config rollup.config.js --format umd --file dist/index.umd.js",
+    "build:es": "../node_modules/.bin/rollup --config rollup.config.js --format es --file dist/index.esm.js",
+    "build:unpkg": "../node_modules/.bin/rollup --config rollup.config.js --format iife --file dist/index.min.js"
   },
   "dependencies": {
     "vue": "^2.6.10"
