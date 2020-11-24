@@ -1,0 +1,43 @@
+{
+  "name": "spree_google_analytics",
+  "version": "0.1.15",
+  "description": "Spree Google Analytics",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.esm.js",
+  "browser": {
+    "./sfc": "src/index.js"
+  },
+  "files": [
+    "src/**/*",
+    "dist/**/*"
+  ],
+  "directories": {
+    "lib": "dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/upsidelab/spree_google_analytics.git"
+  },
+  "keywords": [],
+  "author": "Upsidelab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/upsidelab/spree_google_analytics/issues"
+  },
+  "homepage": "https://github.com/upsidelab/spree_google_analytics#readme",
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es",
+    "build:umd": "../node_modules/.bin/rollup --config rollup.config.js --format umd --file dist/index.umd.js",
+    "build:es": "../node_modules/.bin/rollup --config rollup.config.js --format es --file dist/index.esm.js"
+  },
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "rollup": "^1.17.0",
+    "rollup-plugin-vue": "^5.0.1",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

@@ -1,4 +1,6 @@
 <h1>HELLO!</h1>
-<div id="app" />
 
-<%= javascript_pack_tag 'reports' %>
+<%= render 'spree/admin/shared/vue_component' do %>
+  <test-a></test-a>
+  <test-b></test-b>
+<% end %>
