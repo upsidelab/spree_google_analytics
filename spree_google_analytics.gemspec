@@ -12,9 +12,9 @@ Gem::Specification.new do |s|
   s.description = 'Add (optional) extension description here'
   s.required_ruby_version = '>= 2.2.7'
 
-  s.author    = 'You'
-  s.email     = 'you@example.com'
-  s.homepage  = 'https://github.com/your-github-handle/spree_google_analytics'
+  s.author    = 'Upsidelab'
+  s.email     = 'grzegorz.tluszcz@upsidelab.io'
+  s.homepage  = 'https://github.com/upsidelab/spree_google_analytics'
   s.license = 'BSD-3-Clause'
 
   s.files       = `git ls-files`.split("\n").reject { |f| f.match(/^spec/) && !f.match(/^spec\/fixtures/) }
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'spree_api', spree_version
   s.add_dependency 'spree_backend', spree_version
   s.add_dependency 'spree_extension'
+  s.add_dependency 'deface', '~> 1.5.3'
 
   s.add_development_dependency 'spree_dev_tools'
 end
