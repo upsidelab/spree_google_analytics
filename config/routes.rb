@@ -1,5 +1,11 @@
 Spree::Core::Engine.add_routes do
   namespace :admin do
-    get '/analytics', to: 'analytics#index'
+    resources :analytics, only: [:index] do
+      collection do
+        Spree::Admin::AnalyticsController.available_reports.each do |name|
+          get name
+        end
+      end
+    end
   end
 end

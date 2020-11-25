@@ -1,7 +1,36 @@
 module Spree
   module Admin
     class AnalyticsController < Spree::Admin::BaseController
-      def index; end
+      class << self
+        def available_reports
+          @@available_reports ||= []
+        end
+
+        def add_report(name)
+          @@available_reports ||= []
+          @@available_reports << name
+          define_method name.to_sym do; end
+        end
+      end
+
+      before_action :set_ga_config, only: %i[sales_total products users categories index pages]
+
+      add_report :sales_total
+      add_report :products
+      add_report :users
+      add_report :categories
+      add_report :pages
+
+      def index
+        @reports = AnalyticsController.available_reports
+      end
+
+      private
+
+      def set_ga_config
+        @ga_token = 'token' #Analytics::ReportingConfig.analytics_access_token['access_token']
+        @ga_view_id = 'view_id' #Analytics::ReportingConfig.analytics_view_id
+      end
     end
   end
 end
