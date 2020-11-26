@@ -9,7 +9,6 @@ end
 gem 'spree', github: 'spree/spree', branch: 'master'
 gem 'rails-controller-testing'
 gem 'webpacker', '~> 4.0'
-gem 'staccato', '~> 0.5'
 
 group :development do
   gem 'byebug'
