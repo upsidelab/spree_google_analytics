@@ -5,7 +5,7 @@ module Analytics
         tracking_id.present?
       end
 
-      def client
+      def client(client_id = nil)
         Staccato.tracker(tracking_id, client_id)
       end
 
@@ -13,10 +13,6 @@ module Analytics
 
       def tracking_id
         ENV['GOOGLE_ANALYTICS_TRACKING_ID']
-      end
-
-      def client_id
-        ENV['GOOGLE_ANALYTICS_CLIENT_ID']
       end
     end
   end
