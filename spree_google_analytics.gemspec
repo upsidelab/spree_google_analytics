@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.author    = 'Upsidelab'
   s.email     = 'grzegorz.tluszcz@upsidelab.io'
-  s.homepage  = 'https://github.com/upsidelab/spree_google_analytics'
+  s.homepage  = 'https://github.com/upsidelab/spree-google-analytics'
   s.license = 'BSD-3-Clause'
 
   s.files       = `git ls-files`.split("\n").reject { |f| f.match(/^spec/) && !f.match(/^spec\/fixtures/) }
