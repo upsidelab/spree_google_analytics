@@ -1,7 +1,7 @@
 module Spree
   Order.class_eval do
     state_machine do
-      after_transition :to => :complete, :do => :submit_to_analytics
+      after_transition to: :complete, do: :submit_to_analytics
     end
 
     private
