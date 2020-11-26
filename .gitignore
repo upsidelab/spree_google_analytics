@@ -20,6 +20,7 @@ spec/dummy
 public/spree
 .ruby-version
 .ruby-gemset
+.tool-versions
 gemfiles/*.gemfile.lock
 node_modules/
 package/dist/
