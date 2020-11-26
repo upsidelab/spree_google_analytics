@@ -44,7 +44,7 @@ module Analytics
         revenue: order.total,
         tax: order.tax_total,
         shipping: order.ship_total,
-        currency: 'USD'
+        currency: order.currency
       })
     end
   end

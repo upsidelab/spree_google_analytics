@@ -18,10 +18,6 @@ module Analytics
       def client_id
         ENV['GOOGLE_ANALYTICS_CLIENT_ID']
       end
-
-      def ecommerce_currency
-        ENV['GOOGLE_ANALYTICS_CURRENCY']
-      end
     end
   end
 end
