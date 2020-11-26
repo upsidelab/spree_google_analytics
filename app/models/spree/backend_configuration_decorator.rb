@@ -1,0 +1,1 @@
+Spree::BackendConfiguration.const_set('ANALYTICS_TABS', [:analytics])
