@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'spree_backend', spree_version
   s.add_dependency 'spree_extension'
   s.add_dependency 'deface', '~> 1.5.3'
+  s.add_dependency 'googleauth', '~> 0.13'
 
   s.add_development_dependency 'spree_dev_tools'
 end

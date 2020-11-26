@@ -13,7 +13,7 @@ module Spree
         end
       end
 
-      before_action :set_ga_config, only: %i[sales_total products users categories index pages]
+      before_action :set_ga_config
 
       add_report :sales_total
       add_report :products
@@ -28,8 +28,8 @@ module Spree
       private
 
       def set_ga_config
-        @ga_token = 'token' #Analytics::ReportingConfig.analytics_access_token['access_token']
-        @ga_view_id = 'view_id' #Analytics::ReportingConfig.analytics_view_id
+        @ga_token = Analytics::ReportingConfig.analytics_access_token['access_token']
+        @ga_view_id = Analytics::ReportingConfig.analytics_view_id
       end
     end
   end
