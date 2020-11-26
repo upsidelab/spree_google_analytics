@@ -6,6 +6,8 @@ module Spree
           @@available_reports ||= []
         end
 
+        private
+
         def add_report(name)
           @@available_reports ||= []
           @@available_reports << name
@@ -14,12 +16,6 @@ module Spree
       end
 
       before_action :set_ga_config
-
-      add_report :sales_total
-      add_report :products
-      add_report :users
-      add_report :categories
-      add_report :pages
 
       def index
         @reports = AnalyticsController.available_reports
