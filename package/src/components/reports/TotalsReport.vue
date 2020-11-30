@@ -1,15 +1,20 @@
 <template>
-  <div :id="reportId">
-    <spinner></spinner>
+  <div>
+    <date-range-picker></date-range-picker>
+    <div :id="reportId">
+      <spinner></spinner>
+    </div>
   </div>
 </template>
 
 <script>
 import Spinner from "../utils/Spinner.vue";
+import DateRangePicker from "../utils/DateRangePicker.vue";
 
 export default {
   components: {
-    Spinner
+    Spinner,
+    DateRangePicker
   },
   props: {
     gapi: Object,
