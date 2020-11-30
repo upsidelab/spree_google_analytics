@@ -2,11 +2,11 @@
   <div class="picker-row">
     <div>
       <label>From:</label>
-      <datepicker class="w-100" v-model="startDate" :disabled-dates="fromDisabledDates" :language="this.currLang" :format="format"></datepicker>
+      <datepicker @input="datesChanged" v-model="fromDate" :disabled-dates="fromDisabledDates" :language="this.currLang" :format="format"></datepicker>
     </div>
     <div>
       <label>To:</label>
-      <datepicker v-model="endDate" :disabled-dates="toDisabledDates" :language="this.currLang" :format="format"></datepicker>
+      <datepicker @input="datesChanged" v-model="toDate" :disabled-dates="toDisabledDates" :language="this.currLang" :format="format"></datepicker>
     </div>
   </div>
 </template>
@@ -28,11 +28,18 @@ export default {
       type: String,
       default: 'dd-MM-yyyy'
     },
+    startDate: null,
+    endDate: null,
   },
   data(){
     return {
-      startDate: null,
-      endDate: null
+      fromDate: this.startDate,
+      toDate: this.endDate
+    }
+  },
+  methods: {
+    datesChanged(e){
+      this.$emit('change', {startDate: this.fromDate, endDate: this.toDate});
     }
   },
   computed: {
@@ -60,5 +67,13 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+  }
+  .picker-button{
+    background-color: #365a79;
+    border-radius: 6px;
+    color: white;
+    border: none;
+    height: 40px;
   }
 </style>

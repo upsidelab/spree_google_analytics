@@ -7,7 +7,13 @@
     ga-token="<%= @ga_token %>"
     ga-view-id="<%= @ga_view_id %>"
     v-slot="{ gapi, authorized, gaViewId }">
-    <totals-report :gapi="gapi" :authorized="authorized" :ga-view-id="gaViewId"></totals-report>
+    <reports-with-date v-slot="{ startDate, endDate }">
+      <totals-report :gapi="gapi"
+                     :authorized="authorized"
+                     :ga-view-id="gaViewId"
+                     :startDate="startDate"
+                     :endDate="endDate"/>
+    </reports-with-date>
   </gapi-auth>
 <% end %>
 
