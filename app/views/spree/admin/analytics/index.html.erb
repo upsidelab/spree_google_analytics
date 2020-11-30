@@ -6,8 +6,8 @@
   <gapi-auth
     ga-token="<%= @ga_token %>"
     ga-view-id="<%= @ga_view_id %>"
-    v-slot="{ gapi, authorized }">
-    <totals-report :authorized="authorized" :gapi="gapi"></totals-report>
+    v-slot="{ gapi, authorized, gaViewId }">
+    <totals-report :gapi="gapi" :authorized="authorized" :ga-view-id="gaViewId"></totals-report>
   </gapi-auth>
 <% end %>
 

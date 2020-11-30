@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="!canDisplayReport" class="alert alert-warning"> Could not display Google Analytics reports </div>
-    <slot :gapi="gapi" :authorized="authorized" v-else/>
+    <slot :gapi="gapi" :authorized="authorized" :ga-view-id="gaViewId" v-else/>
   </div>
 </template>
 

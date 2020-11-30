@@ -31,7 +31,8 @@
     "build:es": "../node_modules/.bin/rollup --config rollup.config.js --format es --file dist/index.esm.js"
   },
   "dependencies": {
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vuejs-datepicker": "^1.6.2"
   },
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.3",
