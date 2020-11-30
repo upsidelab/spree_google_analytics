@@ -1,20 +1,30 @@
 <script>
-import AnalyticsReportMixin from "../mixins/AnalyticsReportMixin";
+import AnalyticsReportMixin from "../mixins/AnalyticsReportMixin.js";
 
 export default {
   mixins: [ AnalyticsReportMixin ],
+  data() {
+    return {
+      reportId: 'totals-report',
+      report: null
+    }
+  },
   computed: {
-    query: {
-      'ids': `ga:${this.gaViewId}`,
-      'start-date': '30daysAgo',
-      'end-date': 'yesterday',
-      'metrics': 'ga:users,ga:uniquePurchases,ga:itemRevenue'
+    query() {
+      return {
+        'ids': `ga:${this.gaViewId}`,
+        'start-date': '30daysAgo',
+        'end-date': 'yesterday',
+        'metrics': 'ga:users,ga:uniquePurchases,ga:itemRevenue'
+      }
     },
-    chart: {
-      'container': this.reportId,
-      'type': 'TABLE',
-      'options': {
-        'width': '100%'
+    chart() {
+      return {
+        'container': this.reportId,
+        'type': 'TABLE',
+        'options': {
+          'width': '100%'
+        }
       }
     }
   }
