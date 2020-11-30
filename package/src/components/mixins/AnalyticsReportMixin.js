@@ -2,7 +2,14 @@ import Spinner from "../utils/Spinner.vue";
 import DateRangePicker from "../utils/DateRangePicker.vue";
 
 export default {
-  template: '<date-range-picker /><div :id="reportId"><spinner /></div>',
+  template: `
+    <div>
+      <date-range-picker />
+      <div :id="reportId">
+        <spinner />
+      </div>
+    </div>
+  `,
   components: { Spinner, DateRangePicker },
   props: {
     gapi: Object,
