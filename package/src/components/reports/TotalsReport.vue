@@ -1,62 +1,32 @@
-<template>
-  <div :id="reportId">
-    <spinner></spinner>
-  </div>
-</template>
-
 <script>
-import Spinner from "../utils/Spinner.vue";
+import AnalyticsReportMixin from "../mixins/AnalyticsReportMixin.js";
 
 export default {
-  components: {
-    Spinner
-  },
-  props: {
-    gapi: Object,
-    authorized: Boolean,
-    gaViewId: String
-  },
+  mixins: [ AnalyticsReportMixin ],
   data() {
     return {
-      reportId: 'summary-container',
+      reportId: 'totals-report',
       report: null
     }
   },
-  watch: {
-    authorized(newVal, oldVal){
-      if(oldVal === false && newVal === true){
-        this.refreshReport()
+  computed: {
+    query() {
+      return {
+        'ids': `ga:${this.gaViewId}`,
+        'start-date': this.startDate.toISOString().split('T')[0],
+        'end-date': this.endDate.toISOString().split('T')[0],
+        'metrics': 'ga:users,ga:uniquePurchases,ga:itemRevenue'
       }
-    }
-  },
-  methods: {
-    refreshReport() {
-      this.report.execute()
     },
-    registerReport(){
-      this.report = new this.gapi.analytics.googleCharts.DataChart({
-        query: {
-          'ids': `ga:${this.gaViewId}`,
-          'start-date': '30daysAgo',
-          'end-date': 'yesterday',
-          'metrics': 'ga:users,ga:uniquePurchases,ga:itemRevenue'
-        },
-        chart: {
-          'container': this.reportId,
-          'type': 'TABLE',
-          'options': {
-            'width': '100%'
-          }
+    chart() {
+      return {
+        'container': this.reportId,
+        'type': 'TABLE',
+        'options': {
+          'width': '100%'
         }
-      });
-
-      if(this.authorized){
-        this.refreshReport()
       }
     }
-  },
-  created() {
-    this.gapi.analytics.ready(this.registerReport)
   }
 }
 </script>
