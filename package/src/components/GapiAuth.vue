@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import gapi from '../modules/gapi'
+import getGapi from '../modules/gapi'
 
 export default {
   props: {
@@ -24,14 +24,15 @@ export default {
     }
   },
   created(){
-    this.gapi = gapi(window, document)
+    this.gapi = getGapi(window, document)
   },
   mounted(){
-    if(!this.gaToken)
+    if(!this.canDisplayReport){
       return
+    }
 
-    gapi.analytics.ready(function() {
-      gapi.analytics.auth.authorize({
+    this.gapi.analytics.ready(function() {
+      this.gapi.analytics.auth.authorize({
         'serverAuth': {
           'access_token': this.gaToken
         }
