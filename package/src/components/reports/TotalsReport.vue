@@ -1,13 +1,16 @@
 <template>
-  
+  <div>
+    TotalsReport
+    <br/>
+    {{authorized}}
+  </div>
 </template>
 
 <script>
 export default {
-  name: "TotalsReport"
+  props: {
+    gapi: Object,
+    authorized: Boolean
+  },
 }
 </script>
-
-<style scoped>
-
-</style>

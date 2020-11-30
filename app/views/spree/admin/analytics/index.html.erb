@@ -3,9 +3,11 @@
 <% end %>
 
 <%= render 'spree/admin/shared/vue_component' do %>
-  <gapi-auth ga-token="<%= @ga_token %>" ga-view-id="<%= @ga_view_id %>">
-    <test-a></test-a>
-    <test-b></test-b>
+  <gapi-auth
+    ga-token="<%= @ga_token %>"
+    ga-view-id="<%= @ga_view_id %>"
+    v-slot="{ gapi, authorized }">
+    <totals-report :authorized="authorized" :gapi="gapi"></totals-report>
   </gapi-auth>
 <% end %>
 

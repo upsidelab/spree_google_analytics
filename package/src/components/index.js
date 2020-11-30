@@ -1,3 +1,2 @@
-export { default as TestA } from './TestA.vue'
-export { default as TestB } from './TestB.vue'
-export { default as GapiAuth} from './GapiAuth.vue'
+export { default as GapiAuth} from './auth/GapiAuth.vue'
+export { default as TotalsReport} from './reports/TotalsReport.vue'
