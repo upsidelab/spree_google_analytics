@@ -36,6 +36,17 @@ export default {
       if(this.authorized) this.refreshReport()
     }
   },
+  computed: {
+    chart() {
+      return {
+        'container': this.reportId,
+        'type': 'TABLE',
+        'options': {
+          'width': '100%'
+        }
+      }
+    }
+  },
   methods: {
     refreshReport() {
       if(!!this.report) this.report.set({query: this.query}).execute()

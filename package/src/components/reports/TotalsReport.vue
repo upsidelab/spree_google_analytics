@@ -17,15 +17,6 @@ export default {
         'end-date': this.endDate.toISOString().split('T')[0],
         'metrics': 'ga:users,ga:uniquePurchases,ga:itemRevenue'
       }
-    },
-    chart() {
-      return {
-        'container': this.reportId,
-        'type': 'TABLE',
-        'options': {
-          'width': '100%'
-        }
-      }
     }
   }
 }
