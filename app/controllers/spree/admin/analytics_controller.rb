@@ -19,6 +19,7 @@ module Spree
 
       add_report :products
       add_report :categories
+      add_report :users
 
       def index
         @reports = AnalyticsController.available_reports
