@@ -6,7 +6,15 @@ export default {
     output: {
         name: 'index',
         exports: 'named',
+        globals: {
+            'vuejs-datepicker': 'Datepicker',
+            'vuejs-datepicker/dist/locale': 'datepickerLocales',
+        }
     },
+    external: [
+        'vuejs-datepicker',
+        'vuejs-datepicker/dist/locale'
+    ],
     plugins: [
         commonjs(),
         vue({
