@@ -34,6 +34,13 @@ module SpreeGoogleAnalytics
         rake("webpacker:install:vue", abort_on_failure: true)
       end
 
+      def remove_webpacker_initial_files
+        return if options[:skip_webpacker_installer]
+
+        File.delete("#{Webpacker.config.source_entry_path}/hello_vue.js")
+        File.delete("#{Webpacker.config.source_path}/app.vue")
+      end
+
       def add_npm_package
         run "yarn add spree_google_analytics"
       end
