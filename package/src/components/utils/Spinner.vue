@@ -1,5 +1,7 @@
 <template>
-  <div class="loader">Loading...</div>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
 </template>
 
 <script>
@@ -66,5 +68,10 @@ export default {}
     height: 5em;
   }
 }
-
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5em;
+}
 </style>
