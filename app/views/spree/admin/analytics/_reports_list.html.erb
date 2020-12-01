@@ -1,0 +1,16 @@
+<% unless @reports.empty? %>
+  <table class="table mt-5">
+    <thead>
+    <tr data-hook="reports_header">
+      <th><%= Spree.t(:name) %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @reports.each do |name| %>
+      <tr data-hook="reports_row">
+        <td><%= link_to Spree.t(name), send("#{name.to_s}_admin_analytics_url".to_sym) %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% end %>
