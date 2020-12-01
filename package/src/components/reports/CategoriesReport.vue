@@ -5,7 +5,7 @@ export default {
   mixins: [ AnalyticsReportMixin ],
   data() {
     return {
-      reportId: 'totals-report',
+      reportId: 'categories-report',
       report: null
     }
   },
@@ -15,7 +15,8 @@ export default {
         'ids': `ga:${this.gaViewId}`,
         'start-date': this.startDate.toISOString().split('T')[0],
         'end-date': this.endDate.toISOString().split('T')[0],
-        'metrics': 'ga:users,ga:uniquePurchases,ga:itemRevenue'
+        'metrics': 'ga:itemRevenue,ga:uniquePurchases,ga:itemQuantity,ga:revenuePerItem',
+        'dimensions': 'ga:productCategoryHierarchy'
       }
     },
     chart() {
