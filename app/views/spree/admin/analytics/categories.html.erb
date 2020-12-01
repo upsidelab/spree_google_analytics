@@ -1,0 +1,19 @@
+<% content_for :page_title do %>
+  <%= link_to(Spree.t(:analytics), admin_analytics_path) %> / <%= Spree.t(:categories) %>
+<% end %>
+
+<%= render 'spree/admin/shared/vue_component' do %>
+  <gapi-auth
+    ga-token="<%= @ga_token %>"
+    ga-view-id="<%= @ga_view_id %>"
+    v-slot="{ gapi, authorized, gaViewId }">
+    <reports-with-date v-slot="{ startDate, endDate }">
+      <categories-report :gapi="gapi"
+                       :authorized="authorized"
+                       :ga-view-id="gaViewId"
+                       :start-date="startDate"
+                       :end-date="endDate">
+      </categories-report>
+    </reports-with-date>
+  </gapi-auth>
+<% end %>
