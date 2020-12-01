@@ -1,9 +1,10 @@
-export { default as GapiAuth} from './auth/GapiAuth.vue'
+export { default as GapiAuth } from './auth/GapiAuth.vue'
 
-export { default as DateRangePicker} from './utils/DateRangePicker.vue'
-export { default as Spinner} from './utils/Spinner.vue'
+export { default as DateRangePicker } from './utils/DateRangePicker.vue'
+export { default as Spinner } from './utils/Spinner.vue'
 
-export { default as ReportsWithDate} from './reports/ReportsWithDate.vue'
-export { default as TotalsReport} from './reports/TotalsReport.vue'
+export { default as ReportsWithDate } from './reports/ReportsWithDate.vue'
+export { default as TotalsReport } from './reports/TotalsReport.vue'
+export { default as ProductsReport } from './reports/ProductsReport.vue'
 
-export { default as AnalyticsReportMixin} from './mixins/AnalyticsReportMixin'
+export { default as AnalyticsReportMixin } from './mixins/AnalyticsReportMixin'

@@ -17,6 +17,8 @@ module Spree
 
       before_action :set_ga_config
 
+      add_report :products
+
       def index
         @reports = AnalyticsController.available_reports
       end
