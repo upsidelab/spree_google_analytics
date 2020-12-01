@@ -20,6 +20,7 @@ module Spree
       add_report :products
       add_report :categories
       add_report :users
+      add_report :sales
       add_report :pages
 
       def index
