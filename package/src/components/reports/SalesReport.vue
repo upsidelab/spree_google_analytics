@@ -17,15 +17,6 @@ export default {
         'end-date': this.endDate.toISOString().split('T')[0],
         'metrics': 'ga:transactions,ga:transactionRevenue,ga:revenuePerTransaction'
       }
-    },
-    chart() {
-      return {
-        'container': this.reportId,
-        'type': 'TABLE',
-        'options': {
-          'width': '100%'
-        }
-      }
     }
   }
 }

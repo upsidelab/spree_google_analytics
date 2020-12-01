@@ -19,15 +19,6 @@ export default {
         'dimensions': 'ga:pagePath',
         'filters': 'ga:pagePath=@product'
       }
-    },
-    chart() {
-      return {
-        'container': this.reportId,
-        'type': 'TABLE',
-        'options': {
-          'width': '100%'
-        }
-      }
     }
   }
 }

@@ -18,15 +18,6 @@ export default {
         'metrics': 'ga:itemRevenue,ga:uniquePurchases,ga:itemQuantity,ga:revenuePerItem',
         'dimensions': 'ga:productName'
       }
-    },
-    chart() {
-      return {
-        'container': this.reportId,
-        'type': 'TABLE',
-        'options': {
-          'width': '100%'
-        }
-      }
     }
   }
 }
