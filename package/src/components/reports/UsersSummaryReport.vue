@@ -5,7 +5,7 @@ export default {
   mixins: [ AnalyticsReportMixin ],
   data() {
     return {
-      reportId: 'users-report',
+      reportId: 'users-summary-report',
       report: null
     }
   },
