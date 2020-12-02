@@ -13,6 +13,7 @@ export { default as SalesBreakdownReport } from './reports/SalesBreakdownReport.
 export { default as ProductPagesReport } from './reports/ProductPagesReport.vue'
 export { default as OtherPagesReport } from './reports/OtherPagesReport.vue'
 export { default as UsersSummaryReport } from './reports/UsersSummaryReport.vue'
+export { default as UsersCountriesReport } from './reports/UsersCountriesReport.vue'
 export { default as UsersChartReport } from './reports/UsersChartReport.vue'
 
 export { default as AnalyticsReportMixin } from './mixins/AnalyticsReportMixin'

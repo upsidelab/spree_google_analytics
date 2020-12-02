@@ -20,6 +20,12 @@
                        :start-date="startDate"
                        :end-date="endDate">
       </users-chart-report>
+      <users-countries-report :gapi="gapi"
+                       :authorized="authorized"
+                       :ga-view-id="gaViewId"
+                       :start-date="startDate"
+                       :end-date="endDate">
+      </users-countries-report>
     </reports-with-date>
   </gapi-auth>
 <% end %>
