@@ -7,7 +7,7 @@ It supports Google Analytics Enhanced Ecommerce (UA) metrics.
 Benefits of using this gem:
 * Server side tracking
 * Easy Customization
-* Plug'n play
+* Plug and play
 
 One of the main advantages of using this gem is that it sends data directly from the server, ensuring that no purchase gets lost due to disabled frontend tracking. Giving more accurate insights into your buisness.
 
