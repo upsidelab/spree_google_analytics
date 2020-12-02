@@ -26,8 +26,7 @@ One of the main advantages of using this gem is that it sends data directly from
     ```
 
 3. Run install task that will:
-    - run migrations (can be skipped with `--skip-migrations`)
-    - install webpacker with vue support (can be skipped with `--skip-webpacker-installer`)
+    - install webpacker with vue support
     - install latest version of the spree_google_analytics npm package
     - copy to your project packs file [spree_google_analytics.js](https://github.com/upsidelab/spree-google-analytics/blob/master/lib/generators/spree_google_analytics/install/files/spree_google_analytics.js)
     - precompile assets
@@ -35,6 +34,13 @@ One of the main advantages of using this gem is that it sends data directly from
     ```sh
     bundle exec rails spree_google_analytics:install
     ```
+
+    If you already have webpacker with Vue installed then run 
+
+    ```sh
+    bundle exec rails spree_google_analytics:install -- --skip-webpacker-installer
+    ```
+
    
 4. Restart your server
     
@@ -117,9 +123,9 @@ If you want to create completely new report along with new view file and new rou
 
 module Spree
     module Admin
-    AnalyticsController.class_eval do
-        add_report :new_report
-    end
+        AnalyticsController.class_eval do
+            add_report :new_report
+        end
     end
 end
 ```
