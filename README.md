@@ -50,7 +50,7 @@ One of the main advantages of using this gem is that it sends data directly from
 
     If you want to send tracking data with each purchase set:
     
-        `ENV['GOOGLE_ANALYTICS_TRACKING_ID']` -  tracking id of your google analytics project
+        `ENV['GOOGLE_ANALYTICS_TRACKING_ID']` -  tracking id of your Google Analytics project
     
     If you want to see analytics reports in the admin panel set:
     
