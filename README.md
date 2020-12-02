@@ -107,7 +107,7 @@ And then simply use it in html.erb:
 ```html
 <!-- app/views/spree/admin/analytics/some_view.html.erb -->
 
-<%= render 'spree/admin/shared/vue_component' do %>
+<%= render 'spree/admin/shared/analytics_vue_mount' do %>
     <my-new-component></my-new-component>
 <% end %>
 ```
@@ -136,7 +136,7 @@ the above will automatically create controller action `new_report#analytics` as 
 <!-- app/views/spree/admin/analytics/new_report.html.erb -->
 
 <!-- no vue here -->
-<%= render 'spree/admin/shared/vue_component' do %> 
+<%= render 'spree/admin/shared/analytics_vue_mount' do %> 
     <!-- Everything in here will be inside Vue app instance -->
 <% end %>
 <!-- no vue here -->
@@ -146,9 +146,9 @@ ____
 
 ### Adding Vue plugins and altering Vue app instance
 
-partial `app/views/spree/admin/shared/_vue_component` includes this gem javascripts and provides a mounting point for Vue instance defined in [spree_google_analytics.js](https://github.com/upsidelab/spree-google-analytics/blob/master/lib/generators/spree_google_analytics/install/files/spree_google_analytics.js)
+partial `app/views/spree/admin/shared/_analytics_vue_mount` includes this gem javascripts and provides a mounting point for Vue instance defined in [spree_google_analytics.js](https://github.com/upsidelab/spree-google-analytics/blob/master/lib/generators/spree_google_analytics/install/files/spree_google_analytics.js)
 
-The above means that Vue will try to mount only on the pages using  `<%= render 'spree/admin/shared/vue_component' %>`
+The above means that Vue by default will try to mount only on the pages using  `<%= render 'spree/admin/shared/analytics_vue_mount' %>`
 
 If you want to add plugin or change Vue instance definition you can simply alter [spree_google_analytics.js](https://github.com/upsidelab/spree-google-analytics/blob/master/lib/generators/spree_google_analytics/install/files/spree_google_analytics.js) file
 
@@ -163,7 +163,7 @@ Vue.use(MyPlugin)
 
 document.addEventListener(event, () => {
     new Vue({
-        el: '#app',
+        el: '#analytics_app',
         components: globalComponents,
         // any changes you want here
     })
