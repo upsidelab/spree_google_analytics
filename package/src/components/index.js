@@ -10,5 +10,6 @@ export { default as CategoriesReport } from './reports/CategoriesReport.vue'
 export { default as UsersReport } from './reports/UsersReport.vue'
 export { default as SalesReport } from './reports/SalesReport.vue'
 export { default as ProductPagesReport } from './reports/ProductPagesReport.vue'
+export { default as OtherPagesReport } from './reports/OtherPagesReport.vue'
 
 export { default as AnalyticsReportMixin } from './mixins/AnalyticsReportMixin'
