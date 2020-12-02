@@ -9,4 +9,3 @@ module SpreeGoogleAnalytics
     end
   end
 end
-  
