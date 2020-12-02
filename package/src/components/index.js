@@ -9,6 +9,7 @@ export { default as ProductsReport } from './reports/ProductsReport.vue'
 export { default as CategoriesReport } from './reports/CategoriesReport.vue'
 export { default as UsersReport } from './reports/UsersReport.vue'
 export { default as SalesSummaryReport } from './reports/SalesSummaryReport.vue'
+export { default as SalesChartReport } from './reports/SalesChartReport.vue'
 export { default as ProductPagesReport } from './reports/ProductPagesReport.vue'
 export { default as OtherPagesReport } from './reports/OtherPagesReport.vue'
 

@@ -14,6 +14,12 @@
                        :start-date="startDate"
                        :end-date="endDate">
       </sales-summary-report>
+      <sales-chart-report :gapi="gapi"
+                       :authorized="authorized"
+                       :ga-view-id="gaViewId"
+                       :start-date="startDate"
+                       :end-date="endDate">
+      </sales-chart-report>
     </reports-with-date>
   </gapi-auth>
 <% end %>
