@@ -8,12 +8,12 @@
     ga-view-id="<%= @ga_view_id %>"
     v-slot="{ gapi, authorized, gaViewId }">
     <reports-with-date v-slot="{ startDate, endDate }">
-      <sales-report :gapi="gapi"
+      <sales-summary-report :gapi="gapi"
                        :authorized="authorized"
                        :ga-view-id="gaViewId"
                        :start-date="startDate"
                        :end-date="endDate">
-      </sales-report>
+      </sales-summary-report>
     </reports-with-date>
   </gapi-auth>
 <% end %>
