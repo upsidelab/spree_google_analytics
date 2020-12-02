@@ -48,11 +48,11 @@ One of the main advantages of using this gem is that it sends data directly from
     
 2. Set required envs
 
-    If you want to send tracking data with each purchase set:
+    If you want to send tracking data with each purchase, set:
     
         `ENV['GOOGLE_ANALYTICS_TRACKING_ID']` -  tracking id of your google analytics project
     
-    If you want to see analytics reports in the admin panel set:
+    If you want to see analytics reports in the admin panel, set:
     
         `ENV['GOOGLE_ANALYTICS_VIEW_ID']` - view id that analytics reports will use 
         `ENV['GOOGLE_ANALYTICS_SERVICE_ACCOUNT_JSON_PATH']` -  a path to a json file containing your credentials
