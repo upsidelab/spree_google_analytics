@@ -5,7 +5,7 @@ export default {
   mixins: [ AnalyticsReportMixin ],
   data() {
     return {
-      reportId: 'users-report',
+      reportId: 'other-pages-report',
       report: null
     }
   },
@@ -15,7 +15,9 @@ export default {
         'ids': `ga:${this.gaViewId}`,
         'start-date': this.startDate.toISOString().split('T')[0],
         'end-date': this.endDate.toISOString().split('T')[0],
-        'metrics': 'ga:users,ga:newUsers',
+        'metrics': 'ga:avgTimeOnPage,ga:pageViews',
+        'dimensions': 'ga:pagePath',
+        'filters': 'ga:pagePath!@product'
       }
     }
   }

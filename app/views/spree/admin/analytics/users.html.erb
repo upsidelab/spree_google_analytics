@@ -8,12 +8,24 @@
     ga-view-id="<%= @ga_view_id %>"
     v-slot="{ gapi, authorized, gaViewId }">
     <reports-with-date v-slot="{ startDate, endDate }">
-      <users-report :gapi="gapi"
+      <users-summary-report :gapi="gapi"
                        :authorized="authorized"
                        :ga-view-id="gaViewId"
                        :start-date="startDate"
                        :end-date="endDate">
-      </users-report>
+      </users-summary-report>
+      <users-chart-report :gapi="gapi"
+                       :authorized="authorized"
+                       :ga-view-id="gaViewId"
+                       :start-date="startDate"
+                       :end-date="endDate">
+      </users-chart-report>
+      <users-countries-report :gapi="gapi"
+                       :authorized="authorized"
+                       :ga-view-id="gaViewId"
+                       :start-date="startDate"
+                       :end-date="endDate">
+      </users-countries-report>
     </reports-with-date>
   </gapi-auth>
 <% end %>
