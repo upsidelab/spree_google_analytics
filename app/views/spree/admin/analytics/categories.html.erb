@@ -2,7 +2,7 @@
   <%= link_to(Spree.t(:analytics), admin_analytics_path) %> / <%= Spree.t(:categories) %>
 <% end %>
 
-<%= render 'spree/admin/shared/vue_component' do %>
+<%= render 'spree/admin/shared/analytics_vue_mount' do %>
   <gapi-auth
     ga-token="<%= @ga_token %>"
     ga-view-id="<%= @ga_view_id %>"
