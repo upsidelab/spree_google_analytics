@@ -31,7 +31,7 @@ module Analytics
         index: index + 1,
         sku: line_item.sku,
         name: line_item.product.name,
-        category: line_item.product.category.name,
+        category: line_item.product.category&.name,
         variant: line_item.variant.descriptive_name,
         quantity: line_item.quantity,
         price: line_item.price
